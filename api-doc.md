@@ -1,29 +1,4 @@
-> API 文档
-
-
-**API说明**
-
-* 请求方式没有特殊说明均为`POST`,提交方式`x-www-form-urlencoded`
-* 在`headers`中传递`token`  `Authorization:Bearer {token}`
-* `{host}`:`http://api.videorank.cn/` 
-* 返回格式统一为：  
-
-```
-{
-   "code": 1,
-   "data": [],
-   "message": "请求成功"
-}
-```
-
-参数说明
-
-| 编号 | 参数 | 名称 | 说明 |
-| --- | --- | --- | --- |
-| 1 | code | 成功标识 | 1：成功，0：失败 |
-| 2 | message | 响应信息 |  |
-| 3 | data | 返回的数据 |  |
-
+> 抖音API文档
 
 **<a href='#login'>0.api登录（获取token）</a>**
 **<a href='#refresh'>1.刷新token</a>**
@@ -74,7 +49,7 @@
 
 ```
 {
-    "code": 1, 
+    "code": 1,
     "data": {
         "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbC5hcGkudmlkZW9yYW5rLmNuXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTU4OTQ5NjIxLCJleHAiOjE1OTA0ODU2MjEsIm5iZiI6MTU1ODk0OTYyMSwianRpIjoib1djTWx5WVFPNzNTNG95SyIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.OzxU3JqY23CmnUx7bI38WyTR6oe11UURXwKxRWySGAA",
         "token_type": "bearer",
@@ -162,7 +137,7 @@
                 "updated_at": "2019-05-30 00:01:03",
                 "created_at": "2018-10-31 19:34:43"
             },
-            
+
             ...
         ],
         "has_more": true
@@ -269,8 +244,8 @@
                 "sticker_id": "",
                 "sticker_name": ""
             },
-                                    
-            ...                                   
+
+            ...
       ],
         "has_more": 1,
         "max_cursor": 1580183576000
@@ -358,9 +333,9 @@
                 "cover_large": "https://p3-dy.byteimg.com/aweme/720x720/ies-music/storm_cover_66dd411902b789cdc02e7afe26e3bc74.jpeg",
                 "play_url": "http://sf16-sg.muscdn.com/obj/tiktok-obj/1254ac4729e63c142b979f1d5e4d8319.mp3"
             },
-    
+
             ...
-        
+
         ],
         "has_more": 1,
         "cursor": 10
@@ -415,9 +390,9 @@
                 "sticker_id": "",
                 "sticker_name": ""
             },
-            
+
             ...
-                        
+
           ],
         "has_more": 1,
         "cursor": 20
@@ -463,7 +438,7 @@
         },
 
         ...
-                               
+
       ],
     "message": "成功"
 }
@@ -509,9 +484,9 @@
             "sticker_id": "",
             "sticker_name": ""
         },
-        
+
         ...
-        
+
     ],
     "message": "成功"
 }
@@ -542,7 +517,7 @@
         },
 
         ...
-    
+
     ],
     "message": "成功"
 }
@@ -598,7 +573,7 @@
                 "music_digg_count": 0,
                 "music_count": 0
             },
-            ...      
+            ...
         ],
         "has_more": true,
         "max_time": 1566779587
@@ -773,9 +748,9 @@
                 "desc":"",
                 "cid":"1658849233565709"
             },
-            
+
             ...
-                         
+
           ],
         "has_more":1,
         "cursor":12
@@ -1008,7 +983,7 @@
                 "sticker_id":"",
                 "sticker_name":""
             },
-            
+
             ...
         ],
         "has_more":1,
