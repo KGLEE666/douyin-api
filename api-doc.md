@@ -1,6 +1,6 @@
 > 抖音API文档
 
-**<a href='#login'>0.api登录（获取token</a><br>**
+**<a href='#login'>0.api登录(获取token)</a><br>**
 **<a href='#refresh'>1.刷新token</a><br>**
 **<a href='#account_list'>2.账号列表</a><br>**
 **<a href='#account_detail'>3.账号详情</a><br>**
