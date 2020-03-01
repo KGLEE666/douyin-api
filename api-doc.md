@@ -29,8 +29,14 @@
 **<a href='#live_promotions'>26.直播购物车</a><br>**
 **<a href='#promotions'>27.橱窗商品列表</a><br>**
 **<a href='#product'>28.商品详情</a><br>**
-**<a href='#order_share'>29.商品晒单列表</a><br>**
-**<a href='#product_comments'>30.商品评价列表</a><br>**
+**<a href='#promotions_category'>29.橱窗商品分类</a><br>**
+**<a href='#goods_rank'>30.人气好物推荐</a><br>**
+**<a href='#brand_category'>31.品牌分类</a><br>**
+**<a href='#brand_category_rank'>32.品牌分类排名</a><br>**
+**<a href='#brand_detail'>33.品牌详情</a><br>**
+**<a href='#order_share'>34.商品晒单列表</a><br>**
+**<a href='#product_comments'>35.商品评价列表</a><br>**
+**<a href='#music_detail'>36.音乐详情</a><br>**
 
 ----
 
@@ -208,7 +214,7 @@
 | 编号 | 字段 | 名称 | 是否必须 | 备注 |
 | --- | --- | --- | --- |--- |
 | 1 | user_id | 用户id | Y | 列表返回的uid |
-| 2 | max_cursor | 排序 | N | 返回的max_cursor|
+| 2 | max_cursor | 分页 | N | 返回的max_cursor|
 
 返回数据示例
 
@@ -1365,7 +1371,343 @@
 }
 ```
 
-**<span id='order_share'>29.商品晒单列表</span>**
+**<span id='order_share'>29.橱窗商品分类</span>**
+
+`url`：`{host}/api/open/douyin/promotions_category
+
+请求参数
+
+| 编号 | 字段 | 名称 | 是否必须 | 备注 |
+| --- | --- | --- | --- |--- |
+| 1 | user_id | 用户id | Y |账号列表返回的 uid 字段|
+
+返回参数示例
+
+```
+{
+    "code": 1,
+    "data": [
+        {
+            "id": 1,
+            "name": "吸湿篮球",
+            "count": 6
+        },
+        {
+            "name": "运动短裤",
+            "count": 1,
+            "id": 2
+        },
+        {
+            "id": 3,
+            "name": "运动T恤",
+            "count": 2
+        },
+        {
+            "id": 4,
+            "name": "束脚裤",
+            "count": 2
+        },
+        {
+            "id": 5,
+            "name": "长袖",
+            "count": 2
+        },
+        {
+            "count": 2,
+            "id": 6,
+            "name": "篮球袜"
+        },
+        {
+            "id": 7,
+            "name": "1号小篮球",
+            "count": 1
+        },
+        {
+            "id": 8,
+            "name": "长袖T恤",
+            "count": 2
+        },
+        {
+            "id": 9,
+            "name": "篮球服",
+            "count": 1
+        },
+        {
+            "id": 10,
+            "name": "篮球合集",
+            "count": 1
+        },
+        {
+            "id": 11,
+            "name": "欧莱雅男士洗面奶",
+            "count": 0
+        },
+        {
+            "count": 1,
+            "id": 12,
+            "name": "卫衣"
+        },
+        {
+            "id": 13,
+            "name": "迷你小篮板",
+            "count": 0
+        },
+        {
+            "id": 14,
+            "name": "紧身裤",
+            "count": 1
+        },
+        {
+            "id": 15,
+            "name": "护具",
+            "count": 2
+        },
+        {
+            "name": "紧身衣",
+            "count": 1,
+            "id": 16
+        },
+        {
+            "id": 17,
+            "name": "篮球鞋",
+            "count": 1
+        }
+    ],
+    "message": "成功"
+}
+```
+
+**<span id='order_share'>30.人气好物推荐</span>**
+
+`url`：`{host}/api/open/douyin/goods_rank`
+
+请求参数：无
+
+返回参数示例
+
+```
+{
+    "code":1,
+    "data":{
+        "special":null,
+        "rank_list":[
+            {
+                "item_id":"6797739553110101259",
+                "item_url":"aweme://aweme/detail/6797739553110101259",
+                "item_type":4,
+                "item_img":"tos-cn-p-0015/029aa22538444374b5f32a24a1b40d49_1582722087",
+                "is_recommended":0,
+                "author":{
+                    "id":97867615298,
+                    "name":"One💛美食",
+                    "avatar":"https://p3-dy.byteimg.com/aweme/100x100/1caf9000471232a5eaae5.jpeg",
+                    "shop_url":"snssdk1128://goods/shop/?uid=97867615298"
+                },
+                "goods":{
+                    "id":"59638133043000",
+                    "product_id":"596381330430",
+                    "detail_url":"",
+                    "title":"韩式烤肉蘸料韩国烧烤调料干料东北撒粉火锅蘸料秘制羊肉串烤肉料",
+                    "price":980,
+                    "market_price":1200,
+                    "score":78401,
+                    "sales":83292,
+                    "cover":"cmp-ecom-alliance/FunZQDsreAGb8SH7epfKqhQf-ijL.jpg",
+                    "commodity_type":7,
+                    "up_or_down":4
+                }
+            },
+           
+        ...
+        ],
+        "total":50,
+        "update_time":"更新于: 3月1日 12:00"
+    },
+    "message":"成功"
+}
+```
+
+**<span id='order_share'>31.品牌分类</span>**
+
+`url`：`{host}/api/open/douyin/brand_category`
+
+请求参数：无
+
+返回参数示例
+
+```
+{
+    "code": 1,
+    "data": {
+        "extra": {
+            "now": 1583047309000,
+            "fatal_item_ids": [],
+            "logid": "202003011521490101290381501A0E028F"
+        },
+        "log_pb": {
+            "impr_id": "202003011521490101290381501A0E028F"
+        },
+        "status_code": 0,
+        "status_msg": "",
+        "banner_url": {
+            "uri": "daa7000a0f0d6a308320",
+            "url_list": [
+                "https://p9-dy.byteimg.com/obj/daa7000a0f0d6a308320?from=3158387923",
+                "https://p26-dy.byteimg.com/obj/daa7000a0f0d6a308320?from=3158387923",
+                "https://p3-dy.byteimg.com/obj/daa7000a0f0d6a308320?from=3158387923"
+            ]
+        },
+        "category_list": [
+            {
+                "id": 1,
+                "name": "汽车"
+            },
+            {
+                "id": 2,
+                "name": "手机"
+            },
+            {
+                "name": "美妆",
+                "id": 3
+            },
+            {
+                "id": 4,
+                "name": "奢侈品"
+            },
+            {
+                "id": 5,
+                "name": "食品饮料"
+            },
+            {
+                "id": 6,
+                "name": "家用电器"
+            },
+            {
+                "id": 7,
+                "name": "服装鞋帽"
+            }
+        ]
+    },
+    "message": "成功"
+}
+```
+
+**<span id='order_share'>32.品牌分类排名</span>**
+
+
+`url`：`{host}/api/open/douyin/brand_category_rank`
+
+请求参数
+
+| 编号 | 字段 | 名称 | 是否必须 | 备注 |
+| --- | --- | --- | --- |--- |
+| 1 | category_id | category_id| Y | |
+| 2 | date | 日期| N |  |
+
+
+返回参数示例
+
+```
+{
+    "code":1,
+    "data":{
+        "log_pb":{
+            "impr_id":"202003011529280101300370370F04DE9D"
+        },
+        "status_code":0,
+        "status_msg":"",
+        "banner_url":{
+            "uri":"daa7000a0f0d6a308320",
+            "url_list":[
+                "https://p9-dy.byteimg.com/obj/daa7000a0f0d6a308320?from=3158387923",
+                "https://p1-dy.byteimg.com/obj/daa7000a0f0d6a308320?from=3158387923",
+                "https://p3-dy.byteimg.com/obj/daa7000a0f0d6a308320?from=3158387923"
+            ]
+        },
+        "weekly_info":{
+            "is_current":false,
+            "serial":50,
+            "start_date":"2020-02-17",
+            "end_date":"2020-02-23",
+            "last_updated_date":"2020-02-27"
+        },
+        "brand_list":[
+            {
+                "rank":1,
+                "rank_diff":0,
+                "heat_diff":19,
+                "id":7860,
+                "name":"林肯",
+                "logo_url":{
+                    "uri":"ad-brand/7860.jpeg",
+                    "url_list":[
+                        "https://p9-dy.byteimg.com/obj/ad-brand/7860.jpeg?from=3158387923",
+                        "https://p1-dy.byteimg.com/obj/ad-brand/7860.jpeg?from=3158387923",
+                        "https://p3-dy.byteimg.com/obj/ad-brand/7860.jpeg?from=3158387923"
+                    ]
+                },
+                "heat":1112
+            },
+            Object{...},
+            Object{...},
+           ...
+        ],
+        "banners":[
+            {
+                "track_url_list":null,
+                "click_track_url_list":null
+            }
+        ],
+        "extra":{
+            "now":1583047769000,
+            "fatal_item_ids":[
+
+            ],
+            "logid":"202003011529280101300370370F04DE9D"
+        }
+    },
+    "message":"成功"
+}
+
+```
+
+**<span id='order_share'>33.品牌详情</span>**
+
+`url`：`{host}/api/open/douyin/brand_detail`
+
+请求参数
+
+| 编号 | 字段 | 名称 | 是否必须 | 备注 |
+| --- | --- | --- | --- |--- |
+| 1 | category_id | 分类id| Y | |
+| 2 | brand_id | 品牌id| N |  |
+
+
+返回参数示例
+
+```
+{
+    "code":1,
+    "data":{
+        "brand":Object{...},
+        "blue_v_account":Object{...},
+        "hot_video_list":Array[3],
+        "keyword":"林肯",
+        "hot_analyses":Array[1],
+        "log_pb":Object{...},
+        "status_msg":"",
+        "last_updated_date":"2020-02-23",
+        "point_list":Array[84],
+        "extra":Object{...},
+        "status_code":0
+    },
+    "message":"成功"
+}
+```
+
+
+
+**<span id='order_share'>34.商品晒单列表</span>**
 
 `url`：`{host}/api/open/douyin/order_share`
 
@@ -1419,7 +1761,7 @@
 ```
 
 
-**<span id='product_comments'>30.商品评价列表</span>**
+**<span id='product_comments'>35.商品评价列表</span>**
 
 `url`：`{host}/api/open/douyin/product_comments`
 
@@ -1459,6 +1801,40 @@
         "total":8
     },
     "message":"成功"
+}
+```
+
+
+
+**<span id='music_detail'>36.音乐详情</span>**
+
+`url`：`{host}/api/open/douyin/music_detail`
+
+请求参数
+
+| 编号 | 字段 | 名称 | 是否必须 | 备注 |
+| --- | --- | --- | --- |--- |
+| 1 | music_id | 音乐id| Y | |
+
+
+
+返回参数示例
+
+```
+{
+    "code": 1,
+    "data": {
+        "id": 6783131443376687117,
+        "title": "无期",
+        "duration": 117,
+        "author": "光头华夏",
+        "owner_id": "95741119273",
+        "user_count": 264790,
+        "avatar_thumb": "https://p9-dy.byteimg.com/aweme/100x100/311bd0000bf2b0316ed6a.jpeg",
+        "cover_large": "https://p1-dy.byteimg.com/aweme/720x720/ies-music/storm_cover_66dd411902b789cdc02e7afe26e3bc74.jpeg",
+        "play_url": "http://sf16-sg.muscdn.com/obj/tiktok-obj/1254ac4729e63c142b979f1d5e4d8319.mp3"
+    },
+    "message": "成功"
 }
 ```
 
